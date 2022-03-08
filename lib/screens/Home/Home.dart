@@ -17,6 +17,7 @@ class Homepage extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.only(top: 20),
             child: AppBar(
+                automaticallyImplyLeading: false,
                 centerTitle: true,
                 elevation: 0,
                 backgroundColor: Colors.grey[300],

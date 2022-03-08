@@ -13,8 +13,8 @@ class _NazalState extends State<Nazal> with SingleTickerProviderStateMixin {
   late TabController _tabController;
   @override
   void initState() {
-    _tabController = TabController(length: 4, initialIndex: 0, vsync: this);
     super.initState();
+    _tabController = TabController(length: 4, initialIndex: 0, vsync: this);
   }
 
   @override

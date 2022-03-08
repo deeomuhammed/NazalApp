@@ -69,6 +69,7 @@ class _TransactonpageState extends State<Transactonpage> {
     return Scaffold(
         backgroundColor: Colors.grey[300],
         appBar: AppBar(
+            automaticallyImplyLeading: false,
             title: Column(
               children: [
                 Padding(
@@ -95,10 +96,10 @@ class _TransactonpageState extends State<Transactonpage> {
             ),
             backgroundColor: Colors.transparent,
             elevation: 0,
-            toolbarHeight: 150,
+            toolbarHeight: 135,
             flexibleSpace: Container(
               decoration: BoxDecoration(
-                  color: Colors.teal[800],
+                  color: Color.fromARGB(255, 0, 128, 128),
                   borderRadius: const BorderRadius.only(
                       bottomLeft: Radius.circular(40),
                       bottomRight: Radius.circular(40))),

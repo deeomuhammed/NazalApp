@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nazalapp/Nazal/view/nazal.dart';
+import 'package:nazalapp/Login/Intro.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -13,8 +13,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Nazal App',
+      theme: ThemeData(
+        colorSchemeSeed: Color.fromARGB(255, 0, 128, 128),
+      ),
       debugShowCheckedModeBanner: false,
-      home: Nazal(),
+      home: Intro(),
     );
   }
 }

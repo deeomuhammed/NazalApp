@@ -1,35 +1,41 @@
 import 'package:flutter/material.dart';
+import 'package:nazalapp/screens/about/private/Aboutapp.dart';
+import 'package:nazalapp/screens/about/private/contact.dart';
+import 'package:nazalapp/screens/about/private/profile.dart';
+import 'package:nazalapp/screens/about/private/rooms.dart';
+import 'package:nazalapp/screens/about/private/students.dart';
 
 class About extends StatelessWidget {
-  const About({Key? key}) : super(key: key);
+  About({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.grey[300],
       body: SafeArea(
         child: CustomScrollView(
           slivers: [
-            const SliverAppBar(
+            SliverAppBar(
+              automaticallyImplyLeading: false,
               elevation: 0,
-              backgroundColor: Colors.white,
+              backgroundColor: Colors.grey[300],
               snap: false,
               pinned: false,
               floating: false,
-              expandedHeight: 150,
+              expandedHeight: 120,
               flexibleSpace: FlexibleSpaceBar(
                 background: Image(
-                  image: AssetImage('assests/image/Group 6 copy.png'),
+                  image: AssetImage('assests/image/Group 6 y.png'),
                   alignment: Alignment.topCenter,
                 ),
               ),
             ),
             SliverList(
                 delegate: SliverChildBuilderDelegate(
-                    (BuildContext context, int index) {
+                    (BuildContext context, int items) {
               return Column(
                 children: [
-                  const SizedBox(height: 55.0),
+                  const SizedBox(height: 35.0),
                   Container(
                       height: 90,
                       alignment: Alignment.center,
@@ -61,69 +67,99 @@ class About extends StatelessWidget {
                     padding: const EdgeInsets.only(left: 30, right: 30),
                     child: Column(
                       children: [
-                        ListTile(
-                          trailing: Icon(
-                            Icons.arrow_drop_down,
-                            size: 30,
+                        InkWell(
+                          onTap: (() => Navigator.push(context,
+                                  MaterialPageRoute(builder: (ctx) {
+                                return Profile();
+                              }))),
+                          child: ListTile(
+                            trailing: Icon(
+                              Icons.arrow_drop_down,
+                              size: 30,
+                            ),
+                            leading: Icon(
+                              Icons.person,
+                              size: 32,
+                              color: Colors.teal[800],
+                            ),
+                            title: Text('My Profile'),
                           ),
-                          leading: Icon(
-                            Icons.person,
-                            size: 32,
-                            color: Colors.teal[800],
-                          ),
-                          title: Text('My Profile'),
                         ),
                         Divider(),
-                        ListTile(
-                          trailing: Icon(
-                            Icons.arrow_drop_down,
-                            size: 30,
+                        InkWell(
+                          onTap: (() => Navigator.push(context,
+                                  MaterialPageRoute(builder: (ctx) {
+                                return Students();
+                              }))),
+                          child: ListTile(
+                            trailing: Icon(
+                              Icons.arrow_drop_down,
+                              size: 30,
+                            ),
+                            leading: Icon(
+                              Icons.group,
+                              size: 32,
+                              color: Colors.teal[800],
+                            ),
+                            title: Text('Students'),
                           ),
-                          leading: Icon(
-                            Icons.group,
-                            size: 32,
-                            color: Colors.teal[800],
-                          ),
-                          title: Text('Students'),
                         ),
                         Divider(),
-                        ListTile(
-                          trailing: Icon(
-                            Icons.arrow_drop_down,
-                            size: 30,
+                        InkWell(
+                          onTap: (() => Navigator.push(context,
+                                  MaterialPageRoute(builder: (ctx) {
+                                return Rooms();
+                              }))),
+                          child: ListTile(
+                            trailing: Icon(
+                              Icons.arrow_drop_down,
+                              size: 30,
+                            ),
+                            leading: Icon(
+                              Icons.bed,
+                              size: 32,
+                              color: Colors.teal[800],
+                            ),
+                            title: Text('Rooms'),
                           ),
-                          leading: Icon(
-                            Icons.bed,
-                            size: 32,
-                            color: Colors.teal[800],
-                          ),
-                          title: Text('Rooms'),
                         ),
                         Divider(),
-                        ListTile(
-                          trailing: Icon(
-                            Icons.arrow_drop_down,
-                            size: 30,
+                        InkWell(
+                          onTap: (() => Navigator.push(context,
+                                  MaterialPageRoute(builder: (ctx) {
+                                return Contact();
+                              }))),
+                          child: ListTile(
+                            trailing: Icon(
+                              Icons.arrow_drop_down,
+                              size: 30,
+                            ),
+                            leading: Icon(
+                              Icons.message,
+                              size: 32,
+                              color: Colors.teal[800],
+                            ),
+                            title: Text('Contact us'),
                           ),
-                          leading: Icon(
-                            Icons.message,
-                            size: 32,
-                            color: Colors.teal[800],
-                          ),
-                          title: Text('Contact us'),
                         ),
                         Divider(),
-                        ListTile(
-                          trailing: Icon(
-                            Icons.arrow_drop_down,
-                            size: 30,
+                        InkWell(
+                          onTap: (() => Navigator.push(context,
+                                  MaterialPageRoute(builder: (ctx) {
+                                return Aboutapp();
+                              }))),
+                          child: ListTile(
+                            trailing: Icon(
+                              Icons.arrow_drop_down,
+                              size: 30,
+                            ),
+                            leading: Icon(
+                              Icons.info_rounded,
+                              size: 32,
+                              color: Colors.teal[800],
+                            ),
+                            title: Text('About'),
                           ),
-                          leading: Icon(
-                            Icons.info_rounded,
-                            size: 32,
-                            color: Colors.teal[800],
-                          ),
-                          title: Text('About'),
                         ),
                         SizedBox(
                           height: 80,
