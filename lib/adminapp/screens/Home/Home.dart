@@ -1,7 +1,6 @@
-import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
-import 'package:nazalapp/screens/Home/room.dart';
-import 'package:nazalapp/screens/Home/studentshome.dart';
+import 'package:nazalapp/adminapp/screens/Home/room.dart';
+import 'package:nazalapp/adminapp/screens/Home/studentshome.dart';
 
 class Homepage extends StatelessWidget {
   Homepage({Key? key}) : super(key: key);

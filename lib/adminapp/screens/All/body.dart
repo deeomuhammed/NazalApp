@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
-
-import 'package:nazalapp/screens/Home/Home.dart';
-import 'package:nazalapp/screens/Message/chat/chat.dart';
-
-import 'package:nazalapp/screens/about/about.dart';
-import 'package:nazalapp/screens/transaction/public.dart';
-
-import 'package:nazalapp/screens/transaction/transaction.dart';
+import 'package:nazalapp/adminapp/screens/Home/Home.dart';
+import 'package:nazalapp/adminapp/screens/Message/chat/chat.dart';
+import 'package:nazalapp/adminapp/screens/about/about.dart';
+import 'package:nazalapp/adminapp/screens/transaction/public.dart';
 
 class Tabbar extends StatefulWidget {
   TabController tabController;

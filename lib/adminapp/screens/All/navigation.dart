@@ -1,7 +1,5 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:motion_tab_bar_v2/motion-tab-bar.dart';
-import 'package:nazalapp/Nazal/view/nazal.dart';
 
 class Navigation extends StatefulWidget {
   TabController tabController;

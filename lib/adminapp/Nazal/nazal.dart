@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:nazalapp/screens/All/body.dart';
-import 'package:nazalapp/screens/All/navigation.dart';
+import 'package:nazalapp/adminapp/screens/All/body.dart';
+import 'package:nazalapp/adminapp/screens/All/navigation.dart';
 
 class Nazal extends StatefulWidget {
   const Nazal({Key? key}) : super(key: key);

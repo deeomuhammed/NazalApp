@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-
-import 'package:nazalapp/screens/transaction/admission/admission.dart';
-
-import 'package:nazalapp/screens/transaction/transaction.dart';
+import 'package:nazalapp/adminapp/screens/transaction/admission/admission.dart';
+import 'package:nazalapp/adminapp/screens/transaction/transaction.dart';
 
 class SecondPage extends StatefulWidget {
   SecondPage({Key? key}) : super(key: key);

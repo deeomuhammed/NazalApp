@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:nazalapp/screens/about/private/Aboutapp.dart';
-import 'package:nazalapp/screens/about/private/contact.dart';
-import 'package:nazalapp/screens/about/private/profile.dart';
-import 'package:nazalapp/screens/about/private/rooms.dart';
-import 'package:nazalapp/screens/about/private/students.dart';
+import 'package:nazalapp/adminapp/screens/about/private/Aboutapp.dart';
+import 'package:nazalapp/adminapp/screens/about/private/contact.dart';
+import 'package:nazalapp/adminapp/screens/about/private/profile.dart';
+import 'package:nazalapp/adminapp/screens/about/private/rooms.dart';
+import 'package:nazalapp/adminapp/screens/about/private/students.dart';
 
 class About extends StatelessWidget {
   About({Key? key}) : super(key: key);

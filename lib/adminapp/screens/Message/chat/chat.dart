@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nazalapp/screens/Message/chat/personalchat.dart';
+import 'package:nazalapp/adminapp/screens/Message/chat/personalchat.dart';
 
 class Chatpage extends StatelessWidget {
   const Chatpage({Key? key}) : super(key: key);

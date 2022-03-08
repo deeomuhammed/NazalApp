@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nazalapp/Login/Loginpage.dart';
-import 'package:nazalapp/Nazal/view/nazal.dart';
+import 'package:nazalapp/adminapp/Nazal/nazal.dart';
+import 'package:nazalapp/studentapp/screen/Homepage/home.dart';
 
 class SignUpStudent extends StatelessWidget {
   const SignUpStudent({Key? key}) : super(key: key);
@@ -162,7 +163,7 @@ class SignUpStudent extends StatelessWidget {
               InkWell(
                 onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (ctx) {
-                    return Nazal();
+                    return StudentsHome();
                   }));
                 },
                 child: Container(

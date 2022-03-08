@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nazalapp/Login/Loginpage.dart';
-import 'package:nazalapp/Nazal/view/nazal.dart';
+
+import 'package:nazalapp/adminapp/Nazal/nazal.dart';
 
 class SignUpAdmin extends StatelessWidget {
   const SignUpAdmin({Key? key}) : super(key: key);

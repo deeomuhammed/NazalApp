@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:nazalapp/Login/adminsignup.dart';
 import 'package:nazalapp/Login/signup.dart';
 
-import 'package:nazalapp/Nazal/view/nazal.dart';
-
 class SignPublic extends StatelessWidget {
   const SignPublic({Key? key}) : super(key: key);
 

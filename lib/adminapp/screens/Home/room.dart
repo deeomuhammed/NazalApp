@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:card_swiper/card_swiper.dart';
-import 'package:nazalapp/screens/Home/detail.dart';
+import 'package:nazalapp/adminapp/screens/Home/detail.dart';
 
 class Roomcard extends StatefulWidget {
   const Roomcard({Key? key}) : super(key: key);
