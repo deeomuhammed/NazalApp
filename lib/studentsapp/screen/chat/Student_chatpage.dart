@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:nazalapp/adminapp/screens/Message/chat/personalchat.dart';
+import 'package:nazalapp/studentsapp/screen/chat/personalchat.dart';
 
-class ChatPage extends StatelessWidget {
-  const ChatPage({Key? key}) : super(key: key);
+class StudentChat extends StatelessWidget {
+  const StudentChat({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -87,7 +87,7 @@ class ChatPage extends StatelessWidget {
                         onTap: () {
                           Navigator.push(context,
                               MaterialPageRoute(builder: (ctx) {
-                            return Personal();
+                            return StPersonalchat();
                           }));
                         },
                         child: ListTile(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nazalapp/Login/Loginpage.dart';
 import 'package:nazalapp/adminapp/Nazal/nazal.dart';
-import 'package:nazalapp/studentapp/screen/Homepage/home.dart';
+import 'package:nazalapp/studentsapp/ALL/studentNazal.dart';
 
 class SignUpStudent extends StatelessWidget {
   const SignUpStudent({Key? key}) : super(key: key);
@@ -13,7 +13,7 @@ class SignUpStudent extends StatelessWidget {
         backgroundColor: Colors.grey[100],
         body: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(30, 25, 30, 19),
+            padding: const EdgeInsets.fromLTRB(30, 25, 30, 0),
             child:
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               Text(
@@ -161,6 +161,8 @@ class SignUpStudent extends StatelessWidget {
                 height: 30,
               ),
               InkWell(
+                splashColor: Colors.transparent,
+                highlightColor: Colors.transparent,
                 onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (ctx) {
                     return StudentsHome();
@@ -182,31 +184,33 @@ class SignUpStudent extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 20,
+                height: 17,
               ),
               Center(
-                child: InkWell(
-                    onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (ctx) {
-                        return LoginPage();
-                      }));
-                    },
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          " Already have an account?",
-                          style: TextStyle(color: Colors.grey, fontSize: 13),
-                        ),
-                        Text(
-                          " Login",
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.w600,
-                              fontSize: 15.5),
-                        ),
-                      ],
-                    )),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      " Already have an account?",
+                      style: TextStyle(color: Colors.grey, fontSize: 13),
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (ctx) {
+                          return LoginPage();
+                        }));
+                      },
+                      child: Text(
+                        " Login",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.w600,
+                            fontSize: 15.5),
+                      ),
+                    )
+                  ],
+                ),
               ),
             ]),
           ),

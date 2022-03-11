@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Personal extends StatelessWidget {
-  const Personal({Key? key}) : super(key: key);
+class StPersonalchat extends StatelessWidget {
+  const StPersonalchat({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,17 +11,6 @@ class Personal extends StatelessWidget {
             color: Colors.teal[800],
           ),
           toolbarHeight: 75,
-          actions: [
-            IconButton(
-                onPressed: () {},
-                icon: Icon(
-                  Icons.call,
-                  color: Colors.teal[800],
-                )),
-            SizedBox(
-              width: 20,
-            )
-          ],
           centerTitle: true,
           title: Text('Name',
               style: TextStyle(
@@ -29,7 +18,7 @@ class Personal extends StatelessWidget {
                   fontFamily: 'ub',
                   fontWeight: FontWeight.w400,
                   fontSize: 28)),
-          elevation: .5,
+          elevation: .6,
           backgroundColor: Colors.grey[300],
         ),
         body: Stack(children: [

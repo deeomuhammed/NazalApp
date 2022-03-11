@@ -95,6 +95,9 @@ flutter:
     - family: ub
       fonts:
         - asset: assests/font/Ubuntu-Medium.ttf
+    - family: rh
+      fonts:
+        - asset: assests/font/RedHatDisplay-Bold.ttf
 
 
   #   - family: Schyler
