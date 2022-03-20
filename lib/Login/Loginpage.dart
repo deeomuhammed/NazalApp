@@ -1,9 +1,13 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:nazalapp/Login/sign.dart';
 import 'package:nazalapp/adminapp/Nazal/nazal.dart';
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  LoginPage({Key? key}) : super(key: key);
+  TextEditingController _email = TextEditingController();
+  TextEditingController _password = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -52,6 +56,7 @@ class LoginPage extends StatelessWidget {
                                         color: Color.fromARGB(255, 0, 128, 128)
                                             .withOpacity(.2)))),
                             child: TextField(
+                              controller: _email,
                               decoration: InputDecoration(
                                   border: InputBorder.none,
                                   hintText: "Email",
@@ -61,6 +66,7 @@ class LoginPage extends StatelessWidget {
                           Container(
                             padding: EdgeInsets.all(10),
                             child: TextField(
+                              controller: _password,
                               decoration: InputDecoration(
                                   border: InputBorder.none,
                                   hintText: "Password",
@@ -84,11 +90,25 @@ class LoginPage extends StatelessWidget {
                       height: 30,
                     ),
                     InkWell(
-                        onTap: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (ctx) {
-                            return Nazal();
-                          }));
+                        onTap: () async {
+                          try {
+                            UserCredential userCredential = await FirebaseAuth
+                                .instance
+                                .signInWithEmailAndPassword(
+                                    email: _email.text,
+                                    password: _password.text);
+                            Navigator.pushReplacement(context,
+                                MaterialPageRoute(builder: (ctx) {
+                              return Nazal();
+                            }));
+                          } on FirebaseAuthException catch (e) {
+                            if (e.code == 'user-not-found') {
+                              print('no user');
+                            }
+                            if (e.code == 'wrong-password') {
+                              print('wrong pass');
+                            }
+                          }
                         },
                         child: Container(
                           height: 50,

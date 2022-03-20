@@ -60,7 +60,7 @@ class SignPublic extends StatelessWidget {
                             onTap: () {
                               Navigator.push(context,
                                   MaterialPageRoute(builder: (ctx) {
-                                return const SignUpStudent();
+                                return SignUpStudent();
                               }));
                             },
                             child: Container(

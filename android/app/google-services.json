@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "161688896769",
+    "project_id": "nazalapp-177eb",
+    "storage_bucket": "nazalapp-177eb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:161688896769:android:a0d6a83212415bef8fc700",
+        "android_client_info": {
+          "package_name": "com.nazal.com.nazalapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "161688896769-p739rsq08jq89j9gb3m5h61mlpnj743b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDavoTaSog7Jm11vGEjxZuxwyOSKL9kTn8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "161688896769-p739rsq08jq89j9gb3m5h61mlpnj743b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,8 +1,12 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:nazalapp/Login/Intro.dart';
+import 'package:nazalapp/studentsapp/screen/payment/pages/Expense/gsheets.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Gsheet.init();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 

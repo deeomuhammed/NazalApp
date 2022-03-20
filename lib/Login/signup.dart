@@ -1,10 +1,32 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:nazalapp/Login/Loginpage.dart';
-import 'package:nazalapp/adminapp/Nazal/nazal.dart';
+
 import 'package:nazalapp/studentsapp/ALL/studentNazal.dart';
 
 class SignUpStudent extends StatelessWidget {
-  const SignUpStudent({Key? key}) : super(key: key);
+  SignUpStudent({Key? key}) : super(key: key);
+
+  TextEditingController stname = TextEditingController();
+  TextEditingController sthouse = TextEditingController();
+  TextEditingController stplace = TextEditingController();
+  TextEditingController stphone = TextEditingController();
+  TextEditingController stemail = TextEditingController();
+  TextEditingController stpassword = TextEditingController();
+
+  Future<void> Stwritedata(String? uid) {
+    CollectionReference students =
+        FirebaseFirestore.instance.collection('Students');
+    return students.doc(uid).set({
+      'Name': stname.text,
+      'Email': stemail.text,
+      'Password': stpassword.text,
+      'HouseName': sthouse.text,
+      'Place': stplace.text,
+      'Phone': stphone.text,
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -63,6 +85,7 @@ class SignUpStudent extends StatelessWidget {
                       height: 63,
                       padding: EdgeInsets.all(5),
                       child: TextField(
+                          controller: stname,
                           decoration: InputDecoration(
                               prefix: SizedBox(
                                 width: 15,
@@ -77,6 +100,7 @@ class SignUpStudent extends StatelessWidget {
                       height: 63,
                       padding: EdgeInsets.all(5),
                       child: TextField(
+                          controller: stemail,
                           decoration: InputDecoration(
                               prefix: SizedBox(
                                 width: 15,
@@ -91,6 +115,7 @@ class SignUpStudent extends StatelessWidget {
                       height: 63,
                       padding: EdgeInsets.all(5),
                       child: TextField(
+                          controller: stphone,
                           decoration: InputDecoration(
                               prefix: SizedBox(
                                 width: 15,
@@ -105,6 +130,7 @@ class SignUpStudent extends StatelessWidget {
                       height: 63,
                       padding: EdgeInsets.all(5),
                       child: TextField(
+                          controller: stpassword,
                           decoration: InputDecoration(
                               prefix: SizedBox(
                                 width: 15,
@@ -119,6 +145,7 @@ class SignUpStudent extends StatelessWidget {
                       height: 63,
                       padding: EdgeInsets.all(5),
                       child: TextField(
+                          controller: sthouse,
                           decoration: InputDecoration(
                               prefix: SizedBox(
                                 width: 15,
@@ -133,6 +160,7 @@ class SignUpStudent extends StatelessWidget {
                       height: 63,
                       padding: EdgeInsets.all(5),
                       child: TextField(
+                          controller: stplace,
                           decoration: InputDecoration(
                               prefix: SizedBox(
                                 width: 15,
@@ -163,10 +191,25 @@ class SignUpStudent extends StatelessWidget {
               InkWell(
                 splashColor: Colors.transparent,
                 highlightColor: Colors.transparent,
-                onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (ctx) {
-                    return StudentsHome();
-                  }));
+                onTap: () async {
+                  try {
+                    UserCredential userCredentialStudent = await FirebaseAuth
+                        .instance
+                        .createUserWithEmailAndPassword(
+                            email: stemail.text, password: stpassword.text);
+
+                    Stwritedata(userCredentialStudent.user?.uid);
+                    Navigator.push(context, MaterialPageRoute(builder: (ctx) {
+                      return StudentsHome();
+                    }));
+                  } on FirebaseAuthException catch (e) {
+                    if (e.code == 'email-already-in-use') {
+                      print('3465');
+                    }
+                    if (e.code == 'weak-password') {
+                      print('1234');
+                    }
+                  }
                 },
                 child: Container(
                   height: 50,

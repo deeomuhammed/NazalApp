@@ -1,10 +1,34 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:nazalapp/Login/Loginpage.dart';
 
-import 'package:nazalapp/adminapp/Nazal/nazal.dart';
+import '../adminapp/Nazal/nazal.dart';
 
 class SignUpAdmin extends StatelessWidget {
-  const SignUpAdmin({Key? key}) : super(key: key);
+  SignUpAdmin({Key? key}) : super(key: key);
+
+  TextEditingController hostelName = TextEditingController();
+  TextEditingController place = TextEditingController();
+  TextEditingController phone = TextEditingController();
+  TextEditingController email = TextEditingController();
+  TextEditingController password = TextEditingController();
+
+  Future<void> writedata(String? uid) {
+    CollectionReference hostel =
+        FirebaseFirestore.instance.collection('Hostels');
+    return hostel.doc(uid).set({
+      'Email': email.text,
+      'Password': password.text,
+      'HostelName': hostelName.text,
+      'Place': place.text,
+      'Phone': phone.text,
+    }).then((value) {
+      print('User added ');
+    }).catchError((error) {
+      print('error');
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +40,7 @@ class SignUpAdmin extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(30, 75, 30, 19),
             child:
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Text(
+              const Text(
                 "Sign up",
                 style: TextStyle(
                   fontSize: 32,
@@ -24,7 +48,7 @@ class SignUpAdmin extends StatelessWidget {
                   color: Color.fromARGB(250, 2, 94, 94),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               Row(
@@ -33,7 +57,7 @@ class SignUpAdmin extends StatelessWidget {
                     "Create an account if you are a ",
                     style: TextStyle(fontSize: 12.5, color: Colors.grey[400]),
                   ),
-                  Text(
+                  const Text(
                     "Hostel Admin",
                     style: TextStyle(
                         fontSize: 12.5,
@@ -41,7 +65,7 @@ class SignUpAdmin extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Container(
@@ -63,7 +87,8 @@ class SignUpAdmin extends StatelessWidget {
                       height: 63,
                       padding: EdgeInsets.all(5),
                       child: TextField(
-                          decoration: InputDecoration(
+                          controller: hostelName,
+                          decoration: const InputDecoration(
                               prefix: SizedBox(
                                 width: 15,
                               ),
@@ -77,7 +102,8 @@ class SignUpAdmin extends StatelessWidget {
                       height: 63,
                       padding: EdgeInsets.all(5),
                       child: TextField(
-                          decoration: InputDecoration(
+                          controller: place,
+                          decoration: const InputDecoration(
                               prefix: SizedBox(
                                 width: 15,
                               ),
@@ -89,9 +115,10 @@ class SignUpAdmin extends StatelessWidget {
                     ),
                     Container(
                       height: 63,
-                      padding: EdgeInsets.all(5),
+                      padding: const EdgeInsets.all(5),
                       child: TextField(
-                          decoration: InputDecoration(
+                          controller: phone,
+                          decoration: const InputDecoration(
                               prefix: SizedBox(
                                 width: 15,
                               ),
@@ -103,9 +130,10 @@ class SignUpAdmin extends StatelessWidget {
                     ),
                     Container(
                       height: 63,
-                      padding: EdgeInsets.all(5),
+                      padding: const EdgeInsets.all(5),
                       child: TextField(
-                          decoration: InputDecoration(
+                          controller: email,
+                          decoration: const InputDecoration(
                               prefix: SizedBox(
                                 width: 15,
                               ),
@@ -117,9 +145,10 @@ class SignUpAdmin extends StatelessWidget {
                     ),
                     Container(
                       height: 63,
-                      padding: EdgeInsets.all(5),
+                      padding: const EdgeInsets.all(5),
                       child: TextField(
-                          decoration: InputDecoration(
+                          controller: password,
+                          decoration: const InputDecoration(
                               prefix: SizedBox(
                                 width: 15,
                               ),
@@ -132,23 +161,37 @@ class SignUpAdmin extends StatelessWidget {
                   ]),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 40,
               ),
               InkWell(
-                onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (ctx) {
-                    return Nazal();
-                  }));
+                onTap: () async {
+                  try {
+                    UserCredential userCredentialAdmin = await FirebaseAuth
+                        .instance
+                        .createUserWithEmailAndPassword(
+                            email: email.text, password: password.text);
+                    await writedata(userCredentialAdmin.user?.uid);
+                    await Navigator.push(context,
+                        MaterialPageRoute(builder: (ctx) {
+                      return const Nazal();
+                    }));
+                  } on FirebaseAuthException catch (e) {
+                    if (e.code == 'email-already-in-use') {
+                      print('3465');
+                    } else if (e.code == 'weak-password') {
+                      print('1234');
+                    }
+                  }
                 },
                 child: Container(
                   height: 50,
-                  margin: EdgeInsets.symmetric(horizontal: 60),
+                  margin: const EdgeInsets.symmetric(horizontal: 60),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(50),
                     color: Color.fromARGB(250, 2, 94, 94),
                   ),
-                  child: Center(
+                  child: const Center(
                     child: Text(
                       "Signup",
                       style: TextStyle(color: Colors.white),
@@ -156,7 +199,7 @@ class SignUpAdmin extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Center(
@@ -168,7 +211,7 @@ class SignUpAdmin extends StatelessWidget {
                     },
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
+                      children: const [
                         Text(
                           " Already have an account?",
                           style: TextStyle(color: Colors.grey, fontSize: 13),

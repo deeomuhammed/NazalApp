@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nazalapp/studentsapp/screen/payment/pages/Expense.dart';
+import 'package:nazalapp/studentsapp/screen/payment/pages/Expense/Expense.dart';
 import 'package:nazalapp/studentsapp/screen/payment/pages/Stpayment.dart';
 import 'package:nazalapp/studentsapp/screen/payment/pages/TimeTable.dart';
 import 'package:nazalapp/studentsapp/screen/payment/pages/transaction.dart';
@@ -37,11 +37,11 @@ class StudentPayment extends StatelessWidget {
           height: 60,
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 190, right: 40, left: 40),
+          padding: const EdgeInsets.only(top: 190, right: 30, left: 30),
           child: Container(
             child: Wrap(
-              runSpacing: 60,
-              spacing: 40,
+              runSpacing: 70,
+              spacing: 60,
               children: [
                 Column(
                   children: [
@@ -53,27 +53,17 @@ class StudentPayment extends StatelessWidget {
                         })));
                       },
                       child: Container(
+                        child: Image.asset('assests/image/pursecopy.png'),
                         decoration: BoxDecoration(
-                          gradient: LinearGradient(colors: [
-                            Color.fromARGB(255, 230, 81, 0),
-                            Color.fromARGB(255, 248, 136, 75),
-                          ]),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Color.fromRGBO(7, 7, 7, 1).withOpacity(.1),
-                              // blurRadius: 80,
-                              offset: Offset(7, 10),
-                            )
-                          ],
                           borderRadius: BorderRadius.circular(14),
-                          color: Colors.white,
+                          color: Colors.transparent,
                         ),
                         width: 120,
                         height: 150,
                       ),
                     ),
                     SizedBox(
-                      height: 14,
+                      height: 4,
                     ),
                     Text(
                       'Payment',
@@ -94,29 +84,17 @@ class StudentPayment extends StatelessWidget {
                         })));
                       },
                       child: Container(
+                        child: Image.asset('assests/image/graphic_3-2.png'),
                         decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: [
-                              Color.fromARGB(255, 12, 77, 77),
-                              Color.fromARGB(255, 72, 165, 165),
-                            ],
-                          ),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Color.fromRGBO(7, 7, 7, 1).withOpacity(.1),
-                              // blurRadius: 80,
-                              offset: Offset(7, 10),
-                            )
-                          ],
                           borderRadius: BorderRadius.circular(14),
-                          color: Colors.white,
+                          color: Colors.transparent,
                         ),
                         width: 120,
                         height: 150,
                       ),
                     ),
                     SizedBox(
-                      height: 14,
+                      height: 4,
                     ),
                     Text(
                       'Transaction',
@@ -137,29 +115,17 @@ class StudentPayment extends StatelessWidget {
                         })));
                       },
                       child: Container(
+                        child: Image.asset('assests/image/compass.png'),
                         decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: [
-                              Color.fromARGB(255, 12, 77, 77),
-                              Color.fromARGB(255, 72, 165, 165),
-                            ],
-                          ),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Color.fromRGBO(7, 7, 7, 1).withOpacity(.1),
-                              // blurRadius: 80,
-                              offset: Offset(7, 10),
-                            )
-                          ],
                           borderRadius: BorderRadius.circular(14),
-                          color: Colors.white,
+                          color: Colors.transparent,
                         ),
                         width: 120,
                         height: 150,
                       ),
                     ),
                     SizedBox(
-                      height: 14,
+                      height: 4,
                     ),
                     Text(
                       'Time Table',
@@ -180,27 +146,19 @@ class StudentPayment extends StatelessWidget {
                         })));
                       },
                       child: Container(
+                        child: Image.asset('assests/image/graphic_2 copy.png'),
                         decoration: BoxDecoration(
-                          gradient: LinearGradient(colors: [
-                            Color.fromARGB(255, 248, 136, 75),
-                            Color.fromARGB(255, 230, 81, 0),
-                          ]),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Color.fromRGBO(7, 7, 7, 1).withOpacity(.1),
-                              // blurRadius: 80,
-                              offset: Offset(7, 10),
-                            )
-                          ],
+                          color: Colors.transparent,
+
                           borderRadius: BorderRadius.circular(14),
-                          color: Colors.white,
+                          // color: Colors.white,
                         ),
                         width: 120,
                         height: 150,
                       ),
                     ),
                     SizedBox(
-                      height: 14,
+                      height: 4,
                     ),
                     Text(
                       'Expenses ',
