@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class TopCard extends StatelessWidget {
   final String balance;
   final String income;
   final String Expense;
-  TopCard({
+  const TopCard({
     required this.Expense,
     required this.balance,
     required this.income,
@@ -23,7 +22,7 @@ class TopCard extends StatelessWidget {
           boxShadow: [
             BoxShadow(
                 color: Colors.grey.shade500,
-                offset: Offset(4, 4),
+                offset: const Offset(4, 4),
                 blurRadius: 15,
                 spreadRadius: 1),
             const BoxShadow(
@@ -63,19 +62,19 @@ class TopCard extends StatelessWidget {
                     Row(
                       children: [
                         Container(
-                          padding: EdgeInsets.all(8),
+                          padding: const EdgeInsets.all(8),
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             color: Colors.grey[200],
                           ),
-                          child: Center(
+                          child: const Center(
                             child: Icon(
                               Icons.arrow_upward,
                               color: Colors.green,
                             ),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 6,
                         ),
                         Column(children: [
@@ -99,19 +98,19 @@ class TopCard extends StatelessWidget {
                     Row(
                       children: [
                         Container(
-                          padding: EdgeInsets.all(8),
+                          padding: const EdgeInsets.all(8),
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             color: Colors.grey[200],
                           ),
-                          child: Center(
+                          child: const Center(
                             child: Icon(
                               Icons.arrow_downward,
                               color: Colors.red,
                             ),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 6,
                         ),
                         Column(

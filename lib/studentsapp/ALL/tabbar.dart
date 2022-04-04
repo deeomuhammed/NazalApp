@@ -18,7 +18,7 @@ class Tabbarstudent extends StatelessWidget {
         StudentAbout()
       ],
       controller: tabController,
-      physics: NeverScrollableScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
     );
   }
 }

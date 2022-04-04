@@ -14,8 +14,8 @@ class _NavigationState extends State<Navigation> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return CurvedNavigationBar(
       height: 64,
-      color: Color.fromARGB(255, 0, 128, 128),
-      items: [
+      color: const Color.fromARGB(255, 0, 128, 128),
+      items: const [
         Icon(
           Icons.home,
           color: Colors.white,

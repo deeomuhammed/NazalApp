@@ -10,15 +10,15 @@ class Contact extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        title: Text('Contact'),
+        title: const Text('Contact'),
         centerTitle: true,
       ),
       body: Padding(
-        padding: EdgeInsets.all(17),
+        padding: const EdgeInsets.all(17),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               'Please click the following button and send your queires/feedbacks.',
               style: TextStyle(
                   color: Color.fromARGB(255, 206, 18, 5),
@@ -27,14 +27,14 @@ class Contact extends StatelessWidget {
                   fontSize: 18),
               textAlign: TextAlign.center,
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             ElevatedButton(
                 onPressed: () {
                   whatsapp();
                 },
-                child: Text(
+                child: const Text(
                   'Click to contact',
                   style: TextStyle(fontFamily: 'ub'),
                 )),
@@ -50,7 +50,7 @@ class Contact extends StatelessWidget {
                         onTap: () {
                           return mail();
                         },
-                        child: ListTile(
+                        child: const ListTile(
                           title: Text(
                             'deeomuhammed5@gmail.com',
                             style: TextStyle(fontFamily: 'ub'),
@@ -58,12 +58,12 @@ class Contact extends StatelessWidget {
                           leading: Icon(Icons.mail),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       InkWell(
                         onTap: () => whatsapp(),
-                        child: ListTile(
+                        child: const ListTile(
                           leading: Icon(Icons.whatsapp),
                           title: Text(
                             '7994968692',
@@ -71,10 +71,10 @@ class Contact extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
-                      ListTile(
+                      const ListTile(
                         leading: Icon(Icons.person),
                         title: Text(
                           'About Developer',
@@ -99,7 +99,7 @@ class Contact extends StatelessWidget {
                     color: Colors.teal[800],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 20,
                 ),
                 InkWell(
@@ -112,7 +112,7 @@ class Contact extends StatelessWidget {
                     color: Colors.teal[800],
                   ),
                 ),
-                SizedBox(width: 20),
+                const SizedBox(width: 20),
                 InkWell(
                   onTap: () {
                     return mail();
@@ -123,7 +123,7 @@ class Contact extends StatelessWidget {
                     color: Colors.teal[800],
                   ),
                 ),
-                SizedBox(width: 20),
+                const SizedBox(width: 20),
                 InkWell(
                   onTap: () {
                     return telegram();

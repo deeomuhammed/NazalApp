@@ -11,7 +11,7 @@ class Studentscard extends StatefulWidget {
 class _StudentscardState extends State<Studentscard> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: MediaQuery.of(context).size.width,
       height: 120,
       child: Swiper(
@@ -21,7 +21,7 @@ class _StudentscardState extends State<Studentscard> {
               padding: const EdgeInsets.only(top: 13),
               child: Column(
                 children: [
-                  Text('Muhammed DO',
+                  const Text('Muhammed DO',
                       style: TextStyle(
                           fontFamily: 'baloo',
                           fontSize: 22,

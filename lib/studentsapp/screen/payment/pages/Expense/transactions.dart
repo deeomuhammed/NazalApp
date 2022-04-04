@@ -5,7 +5,7 @@ class Transactions extends StatelessWidget {
   final String money;
   final String expenseOrIncome;
 
-  Transactions({
+  const Transactions({
     required this.transactionName,
     required this.money,
     required this.expenseOrIncome,
@@ -16,7 +16,7 @@ class Transactions extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(12),
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 25),
+        padding: const EdgeInsets.symmetric(horizontal: 25),
         color: Colors.grey[200],
         height: 50,
         child: Row(

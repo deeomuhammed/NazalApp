@@ -19,10 +19,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Nazal App',
       theme: ThemeData(
-        colorSchemeSeed: Color.fromARGB(255, 0, 128, 128),
+        colorSchemeSeed: const Color.fromARGB(255, 0, 128, 128),
       ),
       debugShowCheckedModeBanner: false,
-      home: Intro(),
+      home: const Intro(),
     );
   }
 }

@@ -24,7 +24,7 @@ class StPersonalchat extends StatelessWidget {
         body: Stack(children: [
           Container(
             alignment: Alignment.bottomCenter,
-            color: Color.fromARGB(255, 14, 100, 100),
+            color: const Color.fromARGB(255, 14, 100, 100),
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,
             child: Container(
@@ -45,7 +45,7 @@ class StPersonalchat extends StatelessWidget {
                   Expanded(
                       child: TextField(
                     cursorColor: Colors.teal[800],
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                         border: InputBorder.none,
                         hintText: 'Aa',
                         contentPadding:
@@ -53,7 +53,7 @@ class StPersonalchat extends StatelessWidget {
                   )),
                   IconButton(
                       onPressed: () {},
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.send,
                         size: 31,
                         color: Color.fromARGB(255, 14, 100, 100),

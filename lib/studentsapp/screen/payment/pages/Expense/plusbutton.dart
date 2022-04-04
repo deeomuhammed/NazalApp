@@ -9,10 +9,10 @@ class PlusButton extends StatelessWidget {
       height: 75,
       width: 75,
       decoration: BoxDecoration(
-        color: Color.fromARGB(255, 0, 105, 92).withOpacity(.7),
+        color: const Color.fromARGB(255, 0, 105, 92).withOpacity(.7),
         shape: BoxShape.circle,
       ),
-      child: Center(
+      child: const Center(
         child: Text(
           '+',
           style: TextStyle(color: Colors.white, fontSize: 25),

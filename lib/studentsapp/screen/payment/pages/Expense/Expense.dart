@@ -16,7 +16,7 @@ class StExpenses extends StatelessWidget {
           padding: const EdgeInsets.all(25),
           child: Column(
             children: [
-              TopCard(
+              const TopCard(
                 income: '1000',
                 Expense: '100',
                 balance: '900',
@@ -25,7 +25,7 @@ class StExpenses extends StatelessWidget {
                   child: Container(
                 child: Column(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       height: 25,
                     ),
                     Expanded(
@@ -45,7 +45,7 @@ class StExpenses extends StatelessWidget {
                   ],
                 ),
               )),
-              PlusButton()
+              const PlusButton()
             ],
           ),
         ),

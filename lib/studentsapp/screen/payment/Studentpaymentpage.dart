@@ -12,8 +12,8 @@ class StudentPayment extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          child: Padding(
-            padding: const EdgeInsets.only(top: 58, left: 28, right: 20),
+          child: const Padding(
+            padding: EdgeInsets.only(top: 58, left: 28, right: 20),
             child: Text(
               'Activity Tools',
               style: TextStyle(
@@ -33,7 +33,7 @@ class StudentPayment extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 60,
         ),
         Padding(
@@ -49,7 +49,7 @@ class StudentPayment extends StatelessWidget {
                       onTap: () {
                         Navigator.push(context,
                             MaterialPageRoute(builder: ((context) {
-                          return StPayment();
+                          return const StPayment();
                         })));
                       },
                       child: Container(
@@ -62,7 +62,7 @@ class StudentPayment extends StatelessWidget {
                         height: 150,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 4,
                     ),
                     Text(
@@ -80,7 +80,7 @@ class StudentPayment extends StatelessWidget {
                       onTap: () {
                         Navigator.push(context,
                             MaterialPageRoute(builder: ((context) {
-                          return StTransaction();
+                          return const StTransaction();
                         })));
                       },
                       child: Container(
@@ -93,7 +93,7 @@ class StudentPayment extends StatelessWidget {
                         height: 150,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 4,
                     ),
                     Text(
@@ -111,7 +111,7 @@ class StudentPayment extends StatelessWidget {
                       onTap: () {
                         Navigator.push(context,
                             MaterialPageRoute(builder: ((context) {
-                          return StTimeTable();
+                          return const StTimeTable();
                         })));
                       },
                       child: Container(
@@ -124,7 +124,7 @@ class StudentPayment extends StatelessWidget {
                         height: 150,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 4,
                     ),
                     Text(
@@ -142,7 +142,7 @@ class StudentPayment extends StatelessWidget {
                       onTap: () {
                         Navigator.push(context,
                             MaterialPageRoute(builder: ((context) {
-                          return StExpenses();
+                          return const StExpenses();
                         })));
                       },
                       child: Container(
@@ -157,7 +157,7 @@ class StudentPayment extends StatelessWidget {
                         height: 150,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 4,
                     ),
                     Text(

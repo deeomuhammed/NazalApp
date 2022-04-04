@@ -3,7 +3,7 @@ import 'package:nazalapp/adminapp/screens/transaction/admission/admission.dart';
 import 'package:nazalapp/adminapp/screens/transaction/transaction.dart';
 
 class SecondPage extends StatefulWidget {
-  SecondPage({Key? key}) : super(key: key);
+  const SecondPage({Key? key}) : super(key: key);
 
   @override
   State<SecondPage> createState() => _SecondPageState();
@@ -48,7 +48,7 @@ class _SecondPageState extends State<SecondPage>
             ]),
       ),
       body: TabBarView(
-        children: [Transactonpage(), Admissionpage()],
+        children: const [Transactonpage(), Admissionpage()],
         controller: _tabController,
       ),
     );

@@ -24,7 +24,7 @@ class StudentAbout extends StatelessWidget {
               pinned: false,
               floating: false,
               expandedHeight: 120,
-              flexibleSpace: FlexibleSpaceBar(
+              flexibleSpace: const FlexibleSpaceBar(
                 background: Image(
                   image: AssetImage('assests/image/Group 6 y.png'),
                   alignment: Alignment.topCenter,
@@ -44,7 +44,7 @@ class StudentAbout extends StatelessWidget {
                           shape: BoxShape.circle,
                           gradient: LinearGradient(
                               colors: [Colors.orange, Colors.deepOrange])),
-                      child: CircleAvatar(
+                      child: const CircleAvatar(
                         backgroundImage: NetworkImage(
                             'https://cdn.icon-icons.com/icons2/1736/PNG/512/4043260-avatar-male-man-portrait_113269.png'),
                         backgroundColor: Colors.white,
@@ -66,10 +66,10 @@ class StudentAbout extends StatelessWidget {
                         InkWell(
                           onTap: (() => Navigator.push(context,
                                   MaterialPageRoute(builder: (ctx) {
-                                return StProfile();
+                                return const StProfile();
                               }))),
                           child: ListTile(
-                            trailing: Icon(
+                            trailing: const Icon(
                               Icons.arrow_drop_down,
                               size: 30,
                             ),
@@ -78,17 +78,17 @@ class StudentAbout extends StatelessWidget {
                               size: 32,
                               color: Colors.teal[800],
                             ),
-                            title: Text('My Profile'),
+                            title: const Text('My Profile'),
                           ),
                         ),
-                        Divider(),
+                        const Divider(),
                         InkWell(
                           onTap: (() => Navigator.push(context,
                                   MaterialPageRoute(builder: (ctx) {
-                                return StStudents();
+                                return const StStudents();
                               }))),
                           child: ListTile(
-                            trailing: Icon(
+                            trailing: const Icon(
                               Icons.arrow_drop_down,
                               size: 30,
                             ),
@@ -97,17 +97,17 @@ class StudentAbout extends StatelessWidget {
                               size: 32,
                               color: Colors.teal[800],
                             ),
-                            title: Text('About Hostel'),
+                            title: const Text('About Hostel'),
                           ),
                         ),
-                        Divider(),
+                        const Divider(),
                         InkWell(
                           onTap: (() => Navigator.push(context,
                                   MaterialPageRoute(builder: (ctx) {
-                                return StRooms();
+                                return const StRooms();
                               }))),
                           child: ListTile(
-                            trailing: Icon(
+                            trailing: const Icon(
                               Icons.arrow_drop_down,
                               size: 30,
                             ),
@@ -116,17 +116,17 @@ class StudentAbout extends StatelessWidget {
                               size: 32,
                               color: Colors.teal[800],
                             ),
-                            title: Text('Room Mates'),
+                            title: const Text('Room Mates'),
                           ),
                         ),
-                        Divider(),
+                        const Divider(),
                         InkWell(
                           onTap: (() => Navigator.push(context,
                                   MaterialPageRoute(builder: (ctx) {
-                                return StContact();
+                                return const StContact();
                               }))),
                           child: ListTile(
-                            trailing: Icon(
+                            trailing: const Icon(
                               Icons.arrow_drop_down,
                               size: 30,
                             ),
@@ -135,17 +135,17 @@ class StudentAbout extends StatelessWidget {
                               size: 32,
                               color: Colors.teal[800],
                             ),
-                            title: Text('Contact Nazal'),
+                            title: const Text('Contact Nazal'),
                           ),
                         ),
-                        Divider(),
+                        const Divider(),
                         InkWell(
                           onTap: (() => Navigator.push(context,
                                   MaterialPageRoute(builder: (ctx) {
-                                return StAboutapp();
+                                return const StAboutapp();
                               }))),
                           child: ListTile(
-                            trailing: Icon(
+                            trailing: const Icon(
                               Icons.arrow_drop_down,
                               size: 30,
                             ),
@@ -154,10 +154,10 @@ class StudentAbout extends StatelessWidget {
                               size: 32,
                               color: Colors.teal[800],
                             ),
-                            title: Text('About'),
+                            title: const Text('About'),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 80,
                         )
                       ],

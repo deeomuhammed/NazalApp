@@ -81,7 +81,7 @@ class _AdmissionpageState extends State<Admissionpage> {
                 padding: const EdgeInsets.only(bottom: 28),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
+                  children: const [
                     Text(
                       'Current Status',
                       style: TextStyle(
@@ -104,9 +104,9 @@ class _AdmissionpageState extends State<Admissionpage> {
           elevation: 0,
           toolbarHeight: 135,
           flexibleSpace: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 color: Color.fromARGB(255, 0, 128, 128),
-                borderRadius: const BorderRadius.only(
+                borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(40),
                     bottomRight: Radius.circular(40))),
           )),
@@ -115,12 +115,12 @@ class _AdmissionpageState extends State<Admissionpage> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Container(
+            SizedBox(
               height: 75,
               width: 135,
               child: one,
             ),
-            Container(
+            SizedBox(
               height: 75,
               width: 135,
               child: two,
@@ -136,7 +136,7 @@ class _AdmissionpageState extends State<Admissionpage> {
           children: [
             Row(
               children: [
-                SizedBox(
+                const SizedBox(
                   width: 20,
                 ),
                 Text('New Admission',
@@ -147,7 +147,7 @@ class _AdmissionpageState extends State<Admissionpage> {
                         fontSize: 26)),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Expanded(
@@ -160,7 +160,7 @@ class _AdmissionpageState extends State<Admissionpage> {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15)),
                         child: ExpansionTile(
-                          childrenPadding: EdgeInsets.only(bottom: 10),
+                          childrenPadding: const EdgeInsets.only(bottom: 10),
                           textColor: Colors.teal[800],
                           title: Text(
                             'Muhammed$index',
@@ -192,8 +192,8 @@ class _AdmissionpageState extends State<Admissionpage> {
                                     horizontal: 50, vertical: 10),
                                 child: Card(
                                     color: Colors.grey[300],
-                                    child: Padding(
-                                      padding: const EdgeInsets.symmetric(
+                                    child: const Padding(
+                                      padding: EdgeInsets.symmetric(
                                           horizontal: 20),
                                       child: TextField(
                                           decoration: InputDecoration(
@@ -210,7 +210,7 @@ class _AdmissionpageState extends State<Admissionpage> {
                                       const EdgeInsets.fromLTRB(0, 0, 20, 12),
                                   child: ElevatedButton(
                                     onPressed: () {},
-                                    child: Text('Add Student'),
+                                    child: const Text('Add Student'),
                                     style: ElevatedButton.styleFrom(
                                         primary: Colors.teal[800]),
                                   ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Transactonpage extends StatefulWidget {
-  Transactonpage({Key? key}) : super(key: key);
+  const Transactonpage({Key? key}) : super(key: key);
 
   @override
   State<Transactonpage> createState() => _TransactonpageState();
@@ -98,9 +98,9 @@ class _TransactonpageState extends State<Transactonpage> {
             elevation: 0,
             toolbarHeight: 135,
             flexibleSpace: Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   color: Color.fromARGB(255, 0, 128, 128),
-                  borderRadius: const BorderRadius.only(
+                  borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(40),
                       bottomRight: Radius.circular(40))),
             )),
@@ -109,12 +109,12 @@ class _TransactonpageState extends State<Transactonpage> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
+              SizedBox(
                 height: 75,
                 width: 135,
                 child: one,
               ),
-              Container(
+              SizedBox(
                 height: 75,
                 width: 135,
                 child: two,
@@ -129,7 +129,7 @@ class _TransactonpageState extends State<Transactonpage> {
             child:
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               Row(
-                children: [
+                children: const [
                   SizedBox(
                     width: 20,
                   ),
@@ -141,7 +141,7 @@ class _TransactonpageState extends State<Transactonpage> {
                           fontSize: 26)),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Expanded(

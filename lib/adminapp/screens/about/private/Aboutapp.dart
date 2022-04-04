@@ -11,13 +11,13 @@ class Aboutapp extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.teal[800],
         elevation: 0,
-        title: Text('About'),
+        title: const Text('About'),
       ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
         child: Column(
           children: [
-            Image(
+            const Image(
               image: AssetImage('assests/image/Group 6 y.png'),
             ),
             Padding(
@@ -27,7 +27,7 @@ class Aboutapp extends StatelessWidget {
                 thickness: 1,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             Padding(
@@ -40,7 +40,7 @@ class Aboutapp extends StatelessWidget {
                       fontSize: 30)),
             ),
             const Padding(
-              padding: const EdgeInsets.all(15),
+              padding: EdgeInsets.all(15),
               child: Text(
                   'You Can Manage All Your Hostel Things Through The Nazal App And Find Out About The Conditions  In Your Hostel Anytime, Anywhere Through The Application .You Will Be Able To Manage Room Information, Hostel Student Information, Fee Payments  In A Timely Manner',
                   style: TextStyle(
@@ -50,7 +50,7 @@ class Aboutapp extends StatelessWidget {
                       fontSize: 17)),
             ),
             const Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15),
+              padding: EdgeInsets.symmetric(horizontal: 15),
               child: Text('*  We dont share any data with third parties',
                   style: TextStyle(
                       color: Color.fromARGB(255, 206, 18, 5),
@@ -83,7 +83,7 @@ class Aboutapp extends StatelessWidget {
                       color: Colors.teal[800],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 20,
                   ),
                   InkWell(
@@ -96,7 +96,7 @@ class Aboutapp extends StatelessWidget {
                       color: Colors.teal[800],
                     ),
                   ),
-                  SizedBox(width: 20),
+                  const SizedBox(width: 20),
                   InkWell(
                     onTap: () {
                       return mail();
@@ -107,7 +107,7 @@ class Aboutapp extends StatelessWidget {
                       color: Colors.teal[800],
                     ),
                   ),
-                  SizedBox(width: 20),
+                  const SizedBox(width: 20),
                   // InkWell(
                   //   onTap: () {
                   //     return telegram();

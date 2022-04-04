@@ -1,8 +1,10 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
+
 import 'package:flutter/material.dart';
 import 'package:nazalapp/Login/sign.dart';
 import 'package:nazalapp/adminapp/Nazal/nazal.dart';
+import 'package:nazalapp/studentsapp/screen/home/Student_homepage.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({Key? key}) : super(key: key);
@@ -16,8 +18,8 @@ class LoginPage extends StatelessWidget {
         backgroundColor: Colors.grey[100],
         body: ListView(children: [
           Stack(children: [
-            Padding(
-              padding: const EdgeInsets.fromLTRB(40, 55, 40, 0),
+            const Padding(
+              padding: EdgeInsets.fromLTRB(40, 55, 40, 0),
               child: Text(
                 "Login",
                 style: TextStyle(
@@ -57,17 +59,17 @@ class LoginPage extends StatelessWidget {
                                             .withOpacity(.2)))),
                             child: TextField(
                               controller: _email,
-                              decoration: InputDecoration(
+                              decoration: const InputDecoration(
                                   border: InputBorder.none,
                                   hintText: "Email",
                                   hintStyle: TextStyle(color: Colors.grey)),
                             ),
                           ),
                           Container(
-                            padding: EdgeInsets.all(10),
+                            padding: const EdgeInsets.all(10),
                             child: TextField(
                               controller: _password,
-                              decoration: InputDecoration(
+                              decoration: const InputDecoration(
                                   border: InputBorder.none,
                                   hintText: "Password",
                                   hintStyle: TextStyle(color: Colors.grey)),
@@ -76,7 +78,7 @@ class LoginPage extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Center(
@@ -97,10 +99,35 @@ class LoginPage extends StatelessWidget {
                                 .signInWithEmailAndPassword(
                                     email: _email.text,
                                     password: _password.text);
-                            Navigator.pushReplacement(context,
-                                MaterialPageRoute(builder: (ctx) {
-                              return Nazal();
-                            }));
+                            CollectionReference users = FirebaseFirestore
+                                .instance
+                                .collection('Hostels');
+                            try {
+                              await users
+                                  .doc(userCredential.user?.uid)
+                                  .get()
+                                  .then((doc) {
+                                if (doc.exists) {
+                                  Navigator.pushReplacement(context,
+                                      MaterialPageRoute(builder: (ctx) {
+                                    //
+                                    return Nazal();
+                                    //
+                                  }));
+                                } else {
+                                  Navigator.pushReplacement(context,
+                                      MaterialPageRoute(builder: (ctx) {
+                                    //
+                                    return StudentHome();
+                                    //
+                                  }));
+                                }
+                              });
+                              // return exist
+                            } catch (e) {
+                              // If any error Navigate to customer Home screen
+                              print(e);
+                            }
                           } on FirebaseAuthException catch (e) {
                             if (e.code == 'user-not-found') {
                               print('no user');

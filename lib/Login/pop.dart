@@ -24,7 +24,7 @@ class _clState extends State<cl> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 10,
       width: 50,
       child: Column(
@@ -36,7 +36,7 @@ class _clState extends State<cl> {
             onChanged: (val) {
               select(val);
             },
-            title: Text('Student'),
+            title: const Text('Student'),
           ),
           RadioListTile<int>(
             activeColor: Colors.green,
@@ -45,7 +45,7 @@ class _clState extends State<cl> {
             onChanged: (val) {
               select(val);
             },
-            title: Text('Student'),
+            title: const Text('Student'),
           )
         ],
       ),

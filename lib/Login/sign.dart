@@ -9,10 +9,10 @@ class SignPublic extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color.fromRGBO(224, 224, 224, 1),
+        backgroundColor: const Color.fromRGBO(224, 224, 224, 1),
         body: Stack(children: [
-          Padding(
-            padding: const EdgeInsets.fromLTRB(40, 85, 40, 0),
+          const Padding(
+            padding: EdgeInsets.fromLTRB(40, 85, 40, 0),
             child: Text(
               "Signup as",
               style: TextStyle(
@@ -26,11 +26,11 @@ class SignPublic extends StatelessWidget {
             child: Image.asset('assests/image/Learning-cuate.png'),
           ),
           Padding(
-            padding: EdgeInsets.fromLTRB(40, 34, 40, 0),
+            padding: const EdgeInsets.fromLTRB(40, 34, 40, 0),
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  SizedBox(
+                  const SizedBox(
                     height: 300,
                   ),
                   Container(
@@ -39,10 +39,10 @@ class SignPublic extends StatelessWidget {
                         color: Colors.white,
                         boxShadow: [
                           BoxShadow(
-                            color: Color.fromARGB(255, 0, 128, 128)
+                            color: const Color.fromARGB(255, 0, 128, 128)
                                 .withOpacity(.3),
                             // blurRadius: 20,
-                            offset: Offset(7, 10),
+                            offset: const Offset(7, 10),
                           )
                         ]),
                     child: Column(
@@ -53,24 +53,24 @@ class SignPublic extends StatelessWidget {
                               border: Border(
                                   bottom: BorderSide(
                                       width: 3,
-                                      color: Color.fromARGB(255, 0, 128, 128)
+                                      color: const Color.fromARGB(255, 0, 128, 128)
                                           .withOpacity(.4)))),
                           child: InkWell(
                             autofocus: true,
                             onTap: () {
                               Navigator.push(context,
                                   MaterialPageRoute(builder: (ctx) {
-                                return SignUpStudent();
+                                return const SignUpStudent();
                               }));
                             },
                             child: Container(
                               height: 50,
-                              margin: EdgeInsets.symmetric(horizontal: 60),
+                              margin: const EdgeInsets.symmetric(horizontal: 60),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(50),
-                                color: Color.fromARGB(250, 2, 94, 94),
+                                color: const Color.fromARGB(250, 2, 94, 94),
                               ),
-                              child: Center(
+                              child: const Center(
                                 child: Text(
                                   "Student",
                                   style: TextStyle(color: Colors.white),
@@ -80,7 +80,7 @@ class SignPublic extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          padding: EdgeInsets.all(10),
+                          padding: const EdgeInsets.all(10),
                           child: InkWell(
                             onTap: () {
                               Navigator.push(context,
@@ -91,12 +91,12 @@ class SignPublic extends StatelessWidget {
                             child: Container(
                               height: 50,
                               width: 180,
-                              margin: EdgeInsets.symmetric(horizontal: 60),
+                              margin: const EdgeInsets.symmetric(horizontal: 60),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(50),
                                 color: Colors.orange[900],
                               ),
-                              child: Center(
+                              child: const Center(
                                 child: Text(
                                   "Admin",
                                   style: TextStyle(color: Colors.white),

@@ -12,7 +12,7 @@ class Roomcard extends StatefulWidget {
 class _RoomcardState extends State<Roomcard> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: MediaQuery.of(context).size.height,
       height: 350,
       child: Swiper(
@@ -20,7 +20,7 @@ class _RoomcardState extends State<Roomcard> {
           return DecoratedBox(
             decoration: BoxDecoration(
                 border: Border.all(width: 3, color: Colors.white),
-                borderRadius: BorderRadius.all(Radius.circular(40))),
+                borderRadius: const BorderRadius.all(Radius.circular(40))),
             child: Padding(
               padding: const EdgeInsets.all(8),
               child: Card(
@@ -29,8 +29,8 @@ class _RoomcardState extends State<Roomcard> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.all(6),
+                      const Padding(
+                        padding: EdgeInsets.all(6),
                         child: Text(
                           'ROOM - 1',
                           style: TextStyle(
@@ -43,7 +43,7 @@ class _RoomcardState extends State<Roomcard> {
                         'assests/image/Sleep analysis-amico (1).png',
                         width: 200,
                       ),
-                      card2(),
+                      const card2(),
                     ],
                   ),
                 ),

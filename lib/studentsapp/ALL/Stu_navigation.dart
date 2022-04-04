@@ -12,7 +12,7 @@ class _StudentNavigationState extends State<StudentNavigation> {
   @override
   Widget build(BuildContext context) {
     return CurvedNavigationBar(
-      animationDuration: Duration(milliseconds: 400),
+      animationDuration: const Duration(milliseconds: 400),
       height: 70,
       backgroundColor: Colors.transparent,
       items: const [
@@ -33,7 +33,7 @@ class _StudentNavigationState extends State<StudentNavigation> {
           color: Colors.white,
         )
       ],
-      color: Color.fromARGB(255, 0, 128, 128),
+      color: const Color.fromARGB(255, 0, 128, 128),
       onTap: (int value) {
         setState(() {
           widget.tabController.index = value;

@@ -12,12 +12,12 @@ class card2 extends StatelessWidget {
         children: [
           Card(
             color: Colors.orange[900],
-            shape: RoundedRectangleBorder(
+            shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(20))),
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(
-                children: [
+                children: const [
                   Icon(
                     Icons.chair_rounded,
                     color: Colors.white,
@@ -39,12 +39,12 @@ class card2 extends StatelessWidget {
           ),
           Card(
             color: Colors.teal[800],
-            shape: RoundedRectangleBorder(
+            shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(20))),
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(
-                children: [
+                children: const [
                   Icon(
                     Icons.group,
                     color: Colors.white,

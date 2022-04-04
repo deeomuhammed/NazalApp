@@ -16,9 +16,9 @@ class _TabbarState extends State<Tabbar> {
   @override
   Widget build(BuildContext context) {
     return TabBarView(
-      physics: NeverScrollableScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
       controller: widget.tabController,
-      children: [Homepage(), SecondPage(), ChatPage(), About()],
+      children: [Homepage(), const SecondPage(), const ChatPage(), const About()],
     );
   }
 }

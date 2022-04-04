@@ -4,7 +4,7 @@ import 'package:nazalapp/adminapp/screens/Home/studentshome.dart';
 
 class Homepage extends StatelessWidget {
   Homepage({Key? key}) : super(key: key);
-  List<Card> page = [Card(), Card(), Card()];
+  List<Card> page = [const Card(), const Card(), const Card()];
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class Homepage extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.grey[300],
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(80),
+          preferredSize: const Size.fromHeight(80),
           child: Padding(
             padding: const EdgeInsets.only(top: 20),
             child: AppBar(
@@ -30,13 +30,13 @@ class Homepage extends StatelessWidget {
                     cursorHeight: 24,
                     decoration: InputDecoration(
                       border: InputBorder.none,
-                      prefix: SizedBox(
+                      prefix: const SizedBox(
                         width: 15,
                       ),
                       hintText: 'Search',
                       suffixIcon: IconButton(
                           onPressed: () {},
-                          icon: Icon(Icons.search),
+                          icon: const Icon(Icons.search),
                           color: Colors.teal[800]),
                     ),
                   ),
@@ -50,7 +50,7 @@ class Homepage extends StatelessWidget {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15)),
                         child: IconButton(
-                            onPressed: () {}, icon: Icon(Icons.add))),
+                            onPressed: () {}, icon: const Icon(Icons.add))),
                   )
                 ]),
           ),
@@ -58,11 +58,11 @@ class Homepage extends StatelessWidget {
         body: ListView(children: [
           Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Roomcard(),
-              SizedBox(
+              const Roomcard(),
+              const SizedBox(
                 height: 7,
               ),
               Row(
@@ -82,7 +82,7 @@ class Homepage extends StatelessWidget {
                   ),
                 ],
               ),
-              Studentscard()
+              const Studentscard()
             ],
           ),
         ]),

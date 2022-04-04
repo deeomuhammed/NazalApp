@@ -17,7 +17,7 @@ class Gsheet {
 
 ''';
 
-  static final spreadsheetid = '1PXCkxd1Hg0i-k6Dufjdem1HOkk8P1vWTrIXnClSzonY';
+  static const spreadsheetid = '1PXCkxd1Hg0i-k6Dufjdem1HOkk8P1vWTrIXnClSzonY';
   static final gsheets = GSheets(credentials);
   static Worksheet? usersheet;
 

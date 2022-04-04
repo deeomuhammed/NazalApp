@@ -18,7 +18,7 @@ class StudentHome extends StatelessWidget {
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
+                    children: const [
                       CircleAvatar(
                         backgroundImage: NetworkImage(
                             'https://cdn.icon-icons.com/icons2/1736/PNG/512/4043260-avatar-male-man-portrait_113269.png'),
@@ -27,11 +27,11 @@ class StudentHome extends StatelessWidget {
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 26,
                   ),
                   Row(
-                    children: [
+                    children: const [
                       Text(
                         'Hi, ',
                         style: TextStyle(
@@ -79,12 +79,12 @@ class StudentHome extends StatelessWidget {
             ),
             child: Column(
               children: [
-                SizedBox(height: 50.0),
+                const SizedBox(height: 50.0),
                 Container(
                   height: 150,
                   width: 330,
                   decoration: BoxDecoration(
-                      gradient: LinearGradient(
+                      gradient: const LinearGradient(
                         colors: [
                           Color.fromARGB(255, 12, 77, 77),
                           Color.fromARGB(255, 72, 165, 165),
@@ -93,20 +93,20 @@ class StudentHome extends StatelessWidget {
                       boxShadow: [
                         BoxShadow(
                           color:
-                              Color.fromARGB(255, 0, 128, 128).withOpacity(.3),
+                              const Color.fromARGB(255, 0, 128, 128).withOpacity(.3),
                           // blurRadius: 20,
-                          offset: Offset(-6, 10),
+                          offset: const Offset(-6, 10),
                         )
                       ],
-                      color: Color.fromARGB(255, 0, 128, 128),
-                      borderRadius: BorderRadius.only(
+                      color: const Color.fromARGB(255, 0, 128, 128),
+                      borderRadius: const BorderRadius.only(
                           topLeft: Radius.circular(75),
                           bottomLeft: Radius.circular(75),
                           topRight: Radius.circular(10),
                           bottomRight: Radius.circular(10))),
                   child: Row(
                     children: <Widget>[
-                      SizedBox(width: 20.0),
+                      const SizedBox(width: 20.0),
                       CircleAvatar(
                         child: Padding(
                           padding: const EdgeInsets.all(27),
@@ -117,8 +117,8 @@ class StudentHome extends StatelessWidget {
                         // backgroundImage:
                         //     AssetImage('assests/image/double-bed.png'),
                       ),
-                      SizedBox(width: 28),
-                      Text('Room -1',
+                      const SizedBox(width: 28),
+                      const Text('Room -1',
                           style: TextStyle(
                               color: Colors.white,
                               fontFamily: 'rh',
@@ -128,24 +128,24 @@ class StudentHome extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 55, bottom: 20),
+                  padding: const EdgeInsets.only(top: 55, bottom: 20),
                   child: Container(
                     height: 150,
                     width: 330,
                     decoration: BoxDecoration(
                         boxShadow: [
                           BoxShadow(
-                            color: Color.fromARGB(255, 0, 128, 128)
+                            color: const Color.fromARGB(255, 0, 128, 128)
                                 .withOpacity(.2),
                             // blurRadius: 20,
-                            offset: Offset(7, 10),
+                            offset: const Offset(7, 10),
                           )
                         ],
-                        gradient: LinearGradient(colors: [
+                        gradient: const LinearGradient(colors: [
                           Color.fromARGB(255, 230, 81, 0),
                           Color.fromARGB(255, 248, 136, 75),
                         ]),
-                        borderRadius: BorderRadius.only(
+                        borderRadius: const BorderRadius.only(
                             topLeft: Radius.circular(10),
                             bottomLeft: Radius.circular(10),
                             topRight: Radius.circular(75),
@@ -153,7 +153,7 @@ class StudentHome extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: <Widget>[
-                        SizedBox(width: 20.0),
+                        const SizedBox(width: 20.0),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -163,11 +163,11 @@ class StudentHome extends StatelessWidget {
                                     fontFamily: 'rh',
                                     fontWeight: FontWeight.w600,
                                     fontSize: 23)),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Row(
-                              children: [
+                              children: const [
                                 Icon(
                                   FontAwesomeIcons.rupeeSign,
                                   color: Colors.white,
@@ -184,7 +184,7 @@ class StudentHome extends StatelessWidget {
                             ),
                           ],
                         ),
-                        SizedBox(width: 16),
+                        const SizedBox(width: 16),
                         CircleAvatar(
                             child: Padding(
                               padding: const EdgeInsets.all(27),
@@ -192,8 +192,8 @@ class StudentHome extends StatelessWidget {
                             ),
                             // backgroundImage: AssetImage('assests/image/money.png'),
                             radius: 55,
-                            backgroundColor: Color.fromARGB(255, 0, 128, 128)),
-                        SizedBox(width: 20.0),
+                            backgroundColor: const Color.fromARGB(255, 0, 128, 128)),
+                        const SizedBox(width: 20.0),
                       ],
                     ),
                   ),

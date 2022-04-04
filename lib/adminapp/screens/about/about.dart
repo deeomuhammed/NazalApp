@@ -6,7 +6,7 @@ import 'package:nazalapp/adminapp/screens/about/private/rooms.dart';
 import 'package:nazalapp/adminapp/screens/about/private/students.dart';
 
 class About extends StatelessWidget {
-  About({Key? key}) : super(key: key);
+  const About({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class About extends StatelessWidget {
               pinned: false,
               floating: false,
               expandedHeight: 120,
-              flexibleSpace: FlexibleSpaceBar(
+              flexibleSpace: const FlexibleSpaceBar(
                 background: Image(
                   image: AssetImage('assests/image/Group 6 y.png'),
                   alignment: Alignment.topCenter,
@@ -70,10 +70,10 @@ class About extends StatelessWidget {
                         InkWell(
                           onTap: (() => Navigator.push(context,
                                   MaterialPageRoute(builder: (ctx) {
-                                return Profile();
+                                return const Profile();
                               }))),
                           child: ListTile(
-                            trailing: Icon(
+                            trailing: const Icon(
                               Icons.arrow_drop_down,
                               size: 30,
                             ),
@@ -82,17 +82,17 @@ class About extends StatelessWidget {
                               size: 32,
                               color: Colors.teal[800],
                             ),
-                            title: Text('My Profile'),
+                            title: const Text('My Profile'),
                           ),
                         ),
-                        Divider(),
+                        const Divider(),
                         InkWell(
                           onTap: (() => Navigator.push(context,
                                   MaterialPageRoute(builder: (ctx) {
-                                return Students();
+                                return const Students();
                               }))),
                           child: ListTile(
-                            trailing: Icon(
+                            trailing: const Icon(
                               Icons.arrow_drop_down,
                               size: 30,
                             ),
@@ -101,17 +101,17 @@ class About extends StatelessWidget {
                               size: 32,
                               color: Colors.teal[800],
                             ),
-                            title: Text('Students'),
+                            title: const Text('Students'),
                           ),
                         ),
-                        Divider(),
+                        const Divider(),
                         InkWell(
                           onTap: (() => Navigator.push(context,
                                   MaterialPageRoute(builder: (ctx) {
-                                return Rooms();
+                                return const Rooms();
                               }))),
                           child: ListTile(
-                            trailing: Icon(
+                            trailing: const Icon(
                               Icons.arrow_drop_down,
                               size: 30,
                             ),
@@ -120,17 +120,17 @@ class About extends StatelessWidget {
                               size: 32,
                               color: Colors.teal[800],
                             ),
-                            title: Text('Rooms'),
+                            title: const Text('Rooms'),
                           ),
                         ),
-                        Divider(),
+                        const Divider(),
                         InkWell(
                           onTap: (() => Navigator.push(context,
                                   MaterialPageRoute(builder: (ctx) {
-                                return Contact();
+                                return const Contact();
                               }))),
                           child: ListTile(
-                            trailing: Icon(
+                            trailing: const Icon(
                               Icons.arrow_drop_down,
                               size: 30,
                             ),
@@ -139,17 +139,17 @@ class About extends StatelessWidget {
                               size: 32,
                               color: Colors.teal[800],
                             ),
-                            title: Text('Contact us'),
+                            title: const Text('Contact us'),
                           ),
                         ),
-                        Divider(),
+                        const Divider(),
                         InkWell(
                           onTap: (() => Navigator.push(context,
                                   MaterialPageRoute(builder: (ctx) {
-                                return Aboutapp();
+                                return const Aboutapp();
                               }))),
                           child: ListTile(
-                            trailing: Icon(
+                            trailing: const Icon(
                               Icons.arrow_drop_down,
                               size: 30,
                             ),
@@ -158,10 +158,10 @@ class About extends StatelessWidget {
                               size: 32,
                               color: Colors.teal[800],
                             ),
-                            title: Text('About'),
+                            title: const Text('About'),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 80,
                         )
                       ],

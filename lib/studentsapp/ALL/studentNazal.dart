@@ -4,7 +4,7 @@ import 'package:nazalapp/studentsapp/ALL/Stu_navigation.dart';
 import 'package:nazalapp/studentsapp/ALL/tabbar.dart';
 
 class StudentsHome extends StatefulWidget {
-  StudentsHome({Key? key}) : super(key: key);
+  const StudentsHome({Key? key}) : super(key: key);
 
   @override
   State<StudentsHome> createState() => _StudentsHomeState();
@@ -12,7 +12,7 @@ class StudentsHome extends StatefulWidget {
 
 class _StudentsHomeState extends State<StudentsHome>
     with SingleTickerProviderStateMixin {
-  late TabController _tabController =
+  late final TabController _tabController =
       TabController(length: 4, vsync: this, initialIndex: 0);
 
   @override
